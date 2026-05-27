@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Sweet Aura</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" href="/images/logo.png">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">Sweet Aura</div>
+            <ul class="nav-links">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/products.html">Products</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+                <li>
+                    <button id="cart-btn" aria-label="View cart"
+                        style="background:none;border:none;position:relative;cursor:pointer;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" viewBox="0 0 24 24"
+                            style="vertical-align:middle;">
+                            <path fill="var(--gold)"
+                                d="M7 20a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zM7.2 16l.94-2h7.72l.94 2H7.2zM6.16 14l-2.1-8H2V4h2.06l2.7 10.29A2 2 0 0 0 8.6 16h8.8a2 2 0 0 0 1.84-1.71l1.54-8.29A1 1 0 0 0 19.8 4H6.16z" />
+                        </svg>
+                        <span id="cart-count"
+                            style="position:absolute;top:-8px;right:-8px;background:var(--gold);color:#fff;font-size:0.8rem;border-radius:50%;padding:2px 7px;min-width:20px;text-align:center;">0</span>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <section class="products-list">
+        <div class="collection-header">
+            <h2>Our Collection</h2>
+            <p class="collection-desc">Discover our range of luxury fragrances and beauty essentials. Select a category
+                to explore our curated products.</p>
+        </div>
+        <div class="category-bar">
+            <button class="category-btn" data-category="all"><span>All Products</span></button>
+            <button class="category-btn" data-category="perfumes"><span>Perfumes</span></button>
+            <button class="category-btn" data-category="body-mist"><span>Body Mist</span></button>
+            <button class="category-btn" data-category="atomizers"><span>Atomizers</span></button>
+            <button class="category-btn" data-category="lip-oils"><span>Lip Oils</span></button>
+            <button class="category-btn" data-category="handcreams"><span>Hand Creams</span></button>
+            <button class="category-btn" data-category="lip-balms"><span>Lip Balms</span></button>
+            <button class="category-btn" data-category="oil-perfume"><span>Oil Perfume</span></button>
+            <button class="category-btn" data-category="mouth-spray"><span>Mouth Spray</span></button>
+        </div>
+        <div class="search-bar">
+            <div class="search-input-wrapper">
+                <input type="text" id="search-input" placeholder="Search products...">
+                <span class="search-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" viewBox="0 0 24 24">
+                        <circle cx="11" cy="11" r="7" stroke="#2d2320" stroke-width="2" />
+                        <path stroke="#2d2320" stroke-width="2" stroke-linecap="round" d="M20 20l-3.5-3.5" />
+                    </svg>
+                </span>
+            </div>
+        </div>
+        <div class="product-grid" id="all-products">
+            <!-- Product cards injected by JS -->
+        </div>
+    </section>
+    <footer style="background:#191919;color:#fff;padding:2.5rem 0 1.2rem 0;margin-top:3rem;">
+        <div
+            style="max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;gap:2.5rem 3rem;justify-content:flex-start;align-items:flex-start;">
+            <div style="flex:1 1 220px;min-width:180px;">
+                <h3 style="font-size:1.3rem;font-weight:600;margin-bottom:1.2rem;letter-spacing:1px;">CATEGORIES</h3>
+                <div style="display:flex;gap:2.5rem;flex-wrap:wrap;">
+                    <ul style="list-style:none;padding:0;margin:0;min-width:140px;">
+                        <li>Perfumes</li>
+                        <li>Body Mist</li>
+                        <li>Atomizers</li>
+                        <li>Lip Oils</li>
+                        <li>Hand Creams</li>
+                        <li>Lip Balms</li>
+                    </ul>
+                    <ul style="list-style:none;padding:0;margin:0;min-width:140px;">
+                        <li>Oil Perfume</li>
+                        <li>Mouth Spray</li>
+                        <li>Gift Sets</li>
+                        <li>Prefilled Perfumes</li>
+                        <li>Combos</li>
+                        <li>Designer Perfume</li>
+                        <li>Reed Diffusers</li>
+                    </ul>
+                </div>
+            </div>
+            <div style="flex:1 1 260px;min-width:220px;">
+                <h3 style="font-size:1.3rem;font-weight:600;margin-bottom:1.2rem;letter-spacing:1px;">CONTACT</h3>
+                <p style="margin:0 0 0.5rem 0;"><b>Email us:</b> amaharriet011@gmail.com</p>
+                <p style="margin:0 0 0.5rem 0;"><b>Call us:</b> 0557189414, 0201142413</p>
+                <p style="margin:0 0 1.2rem 0;"><b>Visit us:</b> Accra, Ghana</p>
+                <div style="display:flex;gap:1rem;align-items:center;">
+                    <a href="#"
+                        style="display:inline-block;width:36px;height:36px;background:#444;border-radius:50%;display:flex;align-items:center;justify-content:center;"><img
+                            src="images/instagram.png" alt="Instagram" style="width:20px;height:20px;"></a>
+                    <a href="https://wa.me/233504301150" target="_blank"
+                        style="display:inline-block;width:36px;height:36px;background:#444;border-radius:50%;display:flex;align-items:center;justify-content:center;"><img
+                            src="images/whatsapp.png" alt="WhatsApp" style="width:20px;height:20px;"></a>
+                </div>
+            </div>
+        </div>
+        <div style="margin-top:2.5rem;text-align:center;font-size:1rem;color:#ccc;">© 2026 Sweet Aura. All rights
+            reserved</div>
+    </footer>
+    <div id="cart-ui" class="cart-ui hidden">
+        <h3>Your Cart</h3>
+        <ul id="cart-items"></ul>
+        <button id="close-cart" class="btn">Close</button>
+    </div>
+    <script src="/js/script.js"></script>
+</body>
+
+</html>

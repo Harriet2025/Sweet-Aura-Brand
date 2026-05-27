@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Sweet Aura</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" href="/images/logo.png">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">Sweet Aura</div>
+            <ul class="nav-links">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/products.html">Products</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+                <li><a href="#" id="cart-btn">Cart <span id="cart-count">0</span></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="contact" class="contact">
+            <h2>Contact Us</h2>
+            <form class="contact-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+            <div class="contact-info">
+                <p>Email: <a href="mailto:amaharriet011@gmail.com">amaharriet011@gmail.com</a></p>
+                <p>Phone: <a href="tel:0557189414">0557189414</a> or <a href="tel:0201142413">0201142413</a></p>
+            </div>
+        </section>
+    </main>
+    <footer style="background:#191919;color:#fff;padding:2.5rem 0 1.2rem 0;margin-top:3rem;">
+        <div
+            style="max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;gap:2.5rem 3rem;justify-content:flex-start;align-items:flex-start;">
+            <div style="flex:1 1 220px;min-width:180px;">
+                <h3 style="font-size:1.3rem;font-weight:600;margin-bottom:1.2rem;letter-spacing:1px;">CATEGORIES</h3>
+                <div style="display:flex;gap:2.5rem;flex-wrap:wrap;">
+                    <ul style="list-style:none;padding:0;margin:0;min-width:140px;">
+                        <li>Perfumes</li>
+                        <li>Body Mist</li>
+                        <li>Atomizers</li>
+                        <li>Lip Oils</li>
+                        <li>Hand Creams</li>
+                        <li>Lip Balms</li>
+                    </ul>
+                    <ul style="list-style:none;padding:0;margin:0;min-width:140px;">
+                        <li>Oil Perfume</li>
+                        <li>Mouth Spray</li>
+                        <li>Gift Sets</li>
+                        <li>Prefilled Perfumes</li>
+                        <li>Combos</li>
+                        <li>Designer Perfume</li>
+                        <li>Reed Diffusers</li>
+                    </ul>
+                </div>
+            </div>
+            <div style="flex:1 1 260px;min-width:220px;">
+                <h3 style="font-size:1.3rem;font-weight:600;margin-bottom:1.2rem;letter-spacing:1px;">CONTACT</h3>
+                <p style="margin:0 0 0.5rem 0;"><b>Email us:</b> amaharriet011@gmail.com</p>
+                <p style="margin:0 0 0.5rem 0;"><b>Call us:</b> 0557189414, 0201142413</p>
+                <p style="margin:0 0 1.2rem 0;"><b>Visit us:</b> Accra Technical University at Accra, Ghana</p>
+                <div style="display:flex;gap:1rem;align-items:center;">
+                    
+                </div>
+            </div>
+        </div>
+        <div style="margin-top:2.5rem;text-align:center;font-size:1rem;color:#ccc;">© 2026 Sweet Aura. All rights
+            reserved</div>
+    </footer>
+    <div id="cart-ui" class="cart-ui hidden">
+        <h3>Your Cart</h3>
+        <ul id="cart-items"></ul>
+        <button id="close-cart" class="btn">Close</button>
+    </div>
+    <script src="/js/script.js"></script>
+</body>
+
+</html>

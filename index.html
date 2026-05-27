@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sweet Aura - Luxury Perfume</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">Sweet Aura</div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li class="dropdown">
+                    <a href="#products" class="dropbtn">Products</a>
+                    <ul class="dropdown-content">
+                        <li><a href="products.html?category=perfumes">Perfumes</a></li>
+                        <li><a href="products.html?category=body-mist">Body Mist</a></li>
+                        <li><a href="products.html?category=atomizers">Atomizers</a></li>
+                        <li><a href="products.html?category=lip-oils">Lip Oils</a></li>
+                        <li><a href="products.html?category=handcreams">Hand Creams</a></li>
+                        <li><a href="products.html?category=lip-balms">Lip Balms</a></li>
+                        <li><a href="products.html?category=oil-perfume">Oil Perfume</a></li>
+                        <li><a href="products.html?category=mouth-spray">Mouth Spray</a></li>
+                    </ul>
+                </li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+            </ul>
+            <button id="cart-btn" aria-label="View cart"
+                style="background:none;border:none;position:relative;cursor:pointer;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" viewBox="0 0 24 24"
+                    style="vertical-align:middle;">
+                    <path fill="var(--gold)"
+                        d="M7 20a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zM7.2 16l.94-2h7.72l.94 2H7.2zM6.16 14l-2.1-8H2V4h2.06l2.7 10.29A2 2 0 0 0 8.6 16h8.8a2 2 0 0 0 1.84-1.71l1.54-8.29A1 1 0 0 0 19.8 4H6.16z" />
+                </svg>
+                <span id="cart-count"
+                    style="position:absolute;top:-8px;right:-8px;background:var(--gold);color:#fff;font-size:0.8rem;border-radius:50%;padding:2px 7px;min-width:20px;text-align:center;">0</span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-slideshow">
+            <div class="hero-slide" style="background-image: url('images/wallpaper.jpg');"></div>
+            <div class="hero-slide" style="background-image: url('images/wallpaper2.jpg');"></div>
+            <div class="hero-slide" style="background-image: url('images/wallpaperr.jpg');"></div>
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1>Unveil Your Signature Scent</h1>
+                <p>Luxury Perfumes for the Modern Woman</p>
+                <form action="products.html" method="get" class="search-bar" style="margin:1.5rem auto 0;">
+                    <div class="search-input-wrapper">
+                        <input type="text" name="search" placeholder="Search products...">
+                        <span class="search-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none"
+                                viewBox="0 0 24 24">
+                                <circle cx="11" cy="11" r="7" stroke="#2d2320" stroke-width="2" />
+                                <path stroke="#2d2320" stroke-width="2" stroke-linecap="round" d="M20 20l-3.5-3.5" />
+                            </svg>
+                        </span>
+                    </div>
+                </form>
+                <a href="products.html" class="btn" style="margin-top:1.2rem;display:inline-block;">Shop Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products -->
+    <section id="products" class="featured-products">
+        <h2>Featured Products</h2>
+        <div id="featured-products" class="product-grid">
+            <!-- JS will inject product cards here -->
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <form class="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+        <div class="contact-info">
+            <p>Email: <a href="mailto:amaharriet011@gmail.com">amaharriet011@gmail.com</a></p>
+            <p>Phone: <a href="tel:0557189414">0557189414</a> or <a href="tel:0201142413">0201142413</a></p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background:#191919;color:#fff;padding:2.5rem 0 1.2rem 0;margin-top:3rem;">
+        <div
+            style="max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;gap:2.5rem 3rem;justify-content:flex-start;align-items:flex-start;">
+            <div style="flex:1 1 220px;min-width:180px;">
+                <h3 style="font-size:1.3rem;font-weight:600;margin-bottom:1.2rem;letter-spacing:1px;">CATEGORIES</h3>
+                <div style="display:flex;gap:2.5rem;flex-wrap:wrap;">
+                    <ul style="list-style:none;padding:0;margin:0;min-width:140px;">
+                        <li>Perfumes</li>
+                        <li>Body Mist</li>
+                        <li>Atomizers</li>
+                        <li>Lip Oils</li>
+                        <li>Hand Creams</li>
+                        <li>Lip Balms</li>
+                    </ul>
+                    <ul style="list-style:none;padding:0;margin:0;min-width:140px;">
+                        <li>Oil Perfume</li>
+                        <li>Mouth Spray</li>
+                        <li>Gift Sets</li>
+                        <li>Prefilled Perfumes</li>
+                        <li>Combos</li>
+                        <li>Designer Perfume</li>
+                        <li>Reed Diffusers</li>
+                    </ul>
+                </div>
+            </div>
+            <div style="flex:1 1 260px;min-width:220px;">
+                <h3 style="font-size:1.3rem;font-weight:600;margin-bottom:1.2rem;letter-spacing:1px;">CONTACT</h3>
+                <p style="margin:0 0 0.5rem 0;"><b>Email us:</b> amaharriet011@gmail.com</p>
+                <p style="margin:0 0 0.5rem 0;"><b>Call us:</b> 0557189414, 0201142413</p>
+                <p style="margin:0 0 1.2rem 0;"><b>Visit us:</b> Accra Technical University at Accra, Ghana</p>
+                <div style="display:flex;gap:1rem;align-items:center;">
+                    
+                </div>
+            </div>
+        </div>
+        <div style="margin-top:2.5rem;text-align:center;font-size:1rem;color:#ccc;">© 2026 Sweet Aura. All rights
+            reserved</div>
+    </footer>
+
+    <!-- Cart UI -->
+    <div id="cart-ui" class="cart-ui hidden">
+        <h3>Your Cart</h3>
+        <ul id="cart-items"></ul>
+        <div id="cart-total" style="margin:1rem 0 0.5rem 0;font-weight:600;"></div>
+        <form id="checkout-form" style="display:none;flex-direction:column;gap:0.7rem;margin-top:1rem;">
+            <input type="text" id="customer-name" placeholder="Your Name" required
+                style="padding:0.6rem 1rem;border-radius:8px;border:1px solid #eee;">
+            <input type="text" id="customer-phone" placeholder="Phone Number" required
+                style="padding:0.6rem 1rem;border-radius:8px;border:1px solid #eee;">
+            <input type="text" id="customer-address" placeholder="Delivery Address" required
+                style="padding:0.6rem 1rem;border-radius:8px;border:1px solid #eee;">
+            <button type="submit" class="btn" style="margin-top:0.5rem;">Checkout via WhatsApp</button>
+        </form>
+        <button id="checkout-btn" class="btn" style="margin-top:1rem;">Proceed to Checkout</button>
+        <button id="close-cart" class="btn" style="margin-top:0.5rem;">Close</button>
+    </div>
+    <script src="js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            let slideIndex = 0;
+            const slides = document.querySelectorAll('.hero-slide');
+            function showSlide(idx) {
+                slides.forEach((slide, i) => {
+                    slide.style.opacity = (i === idx) ? '1' : '0';
+                });
+            }
+            function nextSlide() {
+                slideIndex = (slideIndex + 1) % slides.length;
+                showSlide(slideIndex);
+            }
+            if (slides.length) {
+                showSlide(slideIndex);
+                setInterval(nextSlide, 3500);
+            }
+        });
+    </script>
+</body>
+</body>
+
+</html>
