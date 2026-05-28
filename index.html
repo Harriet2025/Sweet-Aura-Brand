@@ -86,8 +86,18 @@
     <!-- Products -->
     <section id="products" class="featured-products">
         <h2>Featured Products</h2>
-        <div id="featured-products" class="product-grid">
-            <!-- JS will inject product cards here -->
+        <div id="featured-products-top" class="product-grid">
+            <!-- JS injects first 4 products here -->
+        </div>
+        <div class="products-drawer" id="products-drawer">
+            <div id="featured-products-more" class="product-grid" style="margin-top:1.5rem;">
+                <!-- JS injects remaining products here -->
+            </div>
+        </div>
+        <div class="drawer-toggle-wrap">
+            <button id="drawer-toggle-btn" aria-expanded="false">
+                View All Products <span class="arrow">▼</span>
+            </button>
         </div>
     </section>
 
