@@ -31,6 +31,8 @@ header {
   position: sticky;
   top: 0;
   z-index: 100;
+  /* mobile nav drops down relative to this */
+  isolation: isolate;
 }
 .navbar {
   display: flex;
@@ -39,6 +41,7 @@ header {
   max-width: 1200px;
   margin: 0 auto;
   padding: 1rem 2rem;
+  position: static;
 }
 .logo {
   font-family: 'Playfair Display', serif;
@@ -701,26 +704,30 @@ footer {
 @media (max-width: 768px) {
   /* Navbar */
   .hamburger { display: flex; }
+  header {
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+  }
 
   .nav-links {
     display: flex;
     flex-direction: column;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
+    width: 100%;
     background: var(--white);
     gap: 0;
     padding: 0;
-    box-shadow: 0 8px 24px rgba(44,24,44,0.12);
-    z-index: 99;
+    box-shadow: 0 8px 24px rgba(44,24,44,0.15);
+    z-index: 98;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.35s ease, padding 0.2s;
+    transition: max-height 0.4s ease;
+    /* no absolute positioning — sits in normal flow below navbar */
+    position: static;
   }
   .nav-links.open {
-    max-height: 600px;
-    padding: 0.4rem 0;
+    max-height: 700px;
   }
   .nav-links li { width: 100%; }
   .nav-links li a {
