@@ -5,7 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About - Sweet Aura</title>
+    <meta name="description" content="Learn about Sweet Aura and founder Harriet Ayim — a premium beauty and fragrance brand celebrating the elegance of modern women in Ghana.">
+    <meta property="og:title" content="About - Sweet Aura">
+    <meta property="og:description" content="Meet the founder of Sweet Aura and learn about our mission to bring luxury beauty to every woman.">
+    <meta property="og:image" content="images/mee.jpg">
+    <meta property="og:type" content="website">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -17,8 +24,18 @@
                 <li><a href="products.html">Products</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="#" id="cart-btn">Cart <span id="cart-count">0</span></a></li>
             </ul>
+            <div style="display:flex;align-items:center;gap:0.8rem;">
+                <a href="products.html" id="cart-btn" style="position:relative;background:none;border:none;cursor:pointer;text-decoration:none;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" viewBox="0 0 24 24" style="vertical-align:middle;">
+                        <path fill="var(--gold)" d="M7 20a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zM7.2 16l.94-2h7.72l.94 2H7.2zM6.16 14l-2.1-8H2V4h2.06l2.7 10.29A2 2 0 0 0 8.6 16h8.8a2 2 0 0 0 1.84-1.71l1.54-8.29A1 1 0 0 0 19.8 4H6.16z"/>
+                    </svg>
+                    <span id="cart-count" style="position:absolute;top:-8px;right:-8px;background:var(--gold);color:#fff;font-size:0.8rem;border-radius:50%;padding:2px 7px;min-width:20px;text-align:center;">0</span>
+                </a>
+                <button class="hamburger" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
         </nav>
     </header>
     <section class="about"

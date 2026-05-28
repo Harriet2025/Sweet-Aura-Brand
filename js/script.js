@@ -251,7 +251,7 @@ function renderProducts(containerId, filter) {
     return '<div class="product-card">' +
       (product.tag ? '<span class="product-tag ' + product.tag + '">' + (product.tag === 'best-rated' ? 'Best Rated!' : 'Most Ordered!') + '</span>' : '') +
       (product.discount ? '<span class="discount-badge">-' + product.discount + '%</span>' : '') +
-      '<img src="' + product.image + '" alt="' + product.name + '">' +
+      '<img src="' + product.image + '" alt="' + product.name + '" loading="lazy">' +
       '<h3>' + product.name + '</h3>' +
       '<div class="subtitle">' + (product.subtitle || '') + '</div>' +
       '<span class="rating">' + '★'.repeat(Math.round(product.rating)) + '<span class="rating-num"> ' + (product.rating ? product.rating.toFixed(1) : '') + '</span></span>' +
@@ -265,6 +265,41 @@ function renderProducts(containerId, filter) {
 }
 
 document.addEventListener("DOMContentLoaded", function() {
+
+  // Hamburger menu
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.nav-links');
+  if (hamburger && navLinks) {
+    hamburger.addEventListener('click', function() {
+      hamburger.classList.toggle('open');
+      navLinks.classList.toggle('open');
+    });
+    // Mobile dropdown toggle
+    document.querySelectorAll('.dropdown > .dropbtn').forEach(function(btn) {
+      btn.addEventListener('click', function(e) {
+        if (window.innerWidth <= 768) {
+          e.preventDefault();
+          this.closest('.dropdown').classList.toggle('open');
+        }
+      });
+    });
+    // Close menu when a non-dropdown link is clicked
+    navLinks.querySelectorAll('a:not(.dropbtn)').forEach(function(link) {
+      link.addEventListener('click', function() {
+        hamburger.classList.remove('open');
+        navLinks.classList.remove('open');
+      });
+    });
+  }
+
+  // Toast notification
+  var toastEl = document.getElementById('toast');
+  function showToast(msg) {
+    if (!toastEl) return;
+    toastEl.textContent = msg;
+    toastEl.classList.add('show');
+    setTimeout(function() { toastEl.classList.remove('show'); }, 2500);
+  }
 
   // Render products
   if (document.getElementById("featured-products")) {
@@ -321,7 +356,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
         saveCart();
         updateCartCount();
-        showCart();
+        showToast(prod.name + ' added to cart!');
       }
     }
 
